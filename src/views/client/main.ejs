@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en" theme="light" menuStyle="2" font="1" urlUsed="<%-coming%>" serverKey="<%-serverKey%>">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title id="changable">Main | Capybara</title>
+    <link rel="shortcut icon" href="<%-coming%>/src/capi.svg" type="image/x-icon">
+    <!--OK I PULL REQUEST-->
+</head>
+<body>
+    
+    <%-include("templates/baseMenu")%>
+    <%-include("templates/showcase")%>
+    <%-include("templates/options")%> 
+    <section class="mainContent" id="mainContent" >
+        <%-include("templates/huff")%>
+    </section>
+    <section class="recommendations">
+        <div class="search" id="searchdiv">
+            <%-icons.search%> 
+            <input type="text" placeholder="Search" id="searchbar">
+        </div>
+        <div class="now">
+            <div class="trending" id="trends">
+                <span>Trending Now</span>
+                <div class="trendsCont" id="trendsCont">
+                    <a href="#"><span></span><span>1111</span></a>
+                    <a href="#"><span></span><span>1111</span></a>
+                    <a href="#"><span></span><span>1111</span></a>
+                    <a href="#"><span></span><span>1111</span></a>
+                    <a href="#"><span></span><span>1111</span></a>
+
+                </div>
+            </div>
+            <div class="people" id="pp">
+                <span>Trending People</span>
+                <div class="ppCont" id="ppCont">
+                        <a href="#"><span></span><span>1111</span></a>
+                        <a href="#"><span></span><span>1111</span></a>
+                        <a href="#"><span></span><span>1111</span></a>
+                        <a href="#"><span></span><span>1111</span></a>
+                        <a href="#"><span></span><span>1111</span></a>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+<%-include("templates/classes") %>
+<%-include("templates/loading") %>
+<script src="<%-coming%>/main/bundle.js"></script>
+</html>

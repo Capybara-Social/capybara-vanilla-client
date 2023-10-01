@@ -1,0 +1,407 @@
+
+
+:root{
+    background-color: var(--background);
+}
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    transition: top .05s, left .05s, transform .05s;
+    font-family: "options", monospace;
+}
+
+html,body{
+    height: 100%;
+    width: 100%;
+}
+
+.mainContent{
+    display: flex;
+    width: 85%;
+    height: 100%;
+    justify-content: space-evenly;
+    position: fixed;
+    left: 15%;
+}
+
+.mainContent > .contacts{
+    width: 25%;
+    height: 100%;
+    display: flex;
+    background-color: var(--input);
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.mainContent > .contacts > .conContent{
+    height: 92.5%;
+    width: 95%;
+    background-color: var(--hover);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow-y: scroll;
+    gap: 1.5%;
+}
+
+.mainContent > .contacts > .conContent > .contact:first-child{
+    margin-top: 3%;
+}
+
+.mainContent > .contacts > span{
+    color: var(--text);
+    font-family: "options", monospace;
+}
+
+
+.contact{
+    width: 95%;
+    display: flex;
+    height: 4rem;
+    padding: 1%;
+    padding-left: 2.5%;
+    gap: 5%;
+    align-items: center;
+    background-color: var(--input);
+    border-radius: .5rem;
+}
+
+.contact:first-child{
+    margin-top: 2.5%;
+}
+
+.contact > div:first-child{
+    width: 2.5rem;
+    height: 2.5rem;
+    overflow: hidden;
+    border-radius: 100%;
+}
+
+.contact > div:first-child > img{
+    height: 100%;
+    width: 100%;
+    display: flex;
+}
+
+.contact > div:last-child{
+    display: flex;
+    flex-direction: column;
+    color: var(--text);
+}
+
+.contact > div:last-child > span:first-child{
+    font-size: 1rem;
+}
+
+.contact > div:last-child > span:last-child{
+    font-size: .8rem;
+    opacity: .75;
+}
+
+
+.mainContent > .current{
+    width: 70%;
+    background-color: var(--hover);
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+
+.mainContent > .current > .contDisplay{
+    width: 100%;
+    height: 10%;
+    background-color: var(--input);
+    border-radius:  0 0 1rem 1rem;
+    display: flex;
+    padding: 0 2.5% 0 2.5% ;
+    align-items: center;
+}
+
+.mainContent > .current > .contDisplay > div:first-child{
+    height: 3.5rem;
+    aspect-ratio: 1/1;
+    overflow: hidden;
+    border-radius: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.mainContent > .current > .contDisplay > div:first-child > img{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    object-fit: cover;
+}
+
+.mainContent > .current > .contDisplay > div:nth-child(2){
+    color: var(--text); 
+    display: flex;
+    height: 100%;
+    align-items: left;
+    justify-content: center;
+    margin-left: 1%;
+    flex-direction: column;
+}
+
+.mainContent > .current > .contDisplay > div:nth-child(2) > span:first-child{
+    font-size: 1.25rem;
+}
+
+.mainContent > .current > .contDisplay > div:nth-child(2) > span:last-child{
+    opacity: .8;
+}
+
+.mainContent > .current > .curCont{
+    width: 100%;
+    height: 100%;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+.curCont > .message{
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    margin-top: 1.5%;
+}
+
+.curCont > .you > .usrImg{
+    margin-left: 1%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 100%;
+    overflow: hidden;
+    width: 3.5rem;
+    height: 3.5rem;
+}
+
+
+.curCont > .message > .usrImg > img{
+    width: 100%;
+    height: 100%;
+}
+
+.curCont > .message > .messageCont{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.curCont > .you > .messageCont{
+    background-color: var(--background);
+    max-width: 40%;
+    color: var(--text);
+    margin-left: 1.5%;
+    padding: 1.5%;
+    position: relative;
+    z-index: 1;
+    border-radius: 0rem 1rem 1rem 1rem;
+}
+
+.curCont > .you > .messageCont::before{
+    content: "";
+    position: absolute;
+    height: 5%;
+    width: 5%;
+    left: -2.5%;
+    top: 0%;
+    background-color: var(--background);
+    z-index: 2;
+    clip-path: polygon(
+        0 0,
+        100% 0,
+        100% 100%,
+        0 0
+    );
+}
+
+.curCont > .you > .messageCont > *{
+    padding-bottom: .25rem;
+}
+
+
+.curCont > .you > .messageCont > *:last-child{
+    padding-bottom: 0;
+}
+
+.curCont > .message > .messageCont > .messageText{
+    max-width: 100%;
+    word-wrap: break-word;
+    text-align: justify;
+}
+
+.curCont > .message > .messageCont > .messageMultimedia{
+    width: fit-content;
+    height: fit-content;
+}
+.curCont > .message > .messageCont > .messageMultimedia > *{
+    width: auto;
+    height: auto;
+    max-width: 100%;
+}
+
+.curCont > .me > .usrImg{
+    width: 3.5rem;
+    height: 3.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 100%;
+    overflow: hidden;
+    margin-right: 1%;
+}
+
+.curCont > .me > .messageCont{
+    background-color: var(--capi);
+    max-width: 40%;
+    color: var(--text);
+    margin-right: 1.5%;
+    padding: 1.5%;
+    border-radius: 1rem 0rem 1rem 1rem;
+    position: relative;
+}
+
+.curCont > .me > .messageCont::before{
+    content: "";
+    position: absolute;
+    height: 5%;
+    width: 5%;
+    left: 97.5%;
+    top: 0%;
+    background-color: var(--capi);
+    clip-path: polygon(
+        0 0,
+        100% 0,
+        0 100%,
+        0 0
+    );
+    z-index: 2;
+}
+
+.curCont > .me{
+    justify-content: right;
+    flex-direction: row-reverse;
+}
+
+
+.curCont > .you{
+    justify-content: left;
+}
+
+.writeMessage{
+    width: 100%;
+    height: fit-content;
+    background-color: var(--input);
+    border-radius: 1rem 1rem 0 0;
+    display: flex;
+    justify-content: space-around;
+    align-items:end;
+    padding: 1%;
+    padding-bottom: 2.5%;
+}
+
+.writeMessage > .addZone{
+    justify-content: space-evenly;
+    display: flex;
+    width: 15%;
+    height: fit-content;
+}
+
+.writeMessage > .addZone > span {
+    height: 3.5rem;
+    width: 3.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--hover);
+    padding: 5%;
+    border-radius: 100%;
+    fill: var(--text);
+    transition: background-color .1s, fill .1s;
+}
+
+.writeMessage > .addZone > span:hover{
+    background-color: var(--capi);
+    fill: #fff;
+
+}
+
+
+
+.writeMessage > .addZone > span > svg{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.writeMessage > .writer{
+    width: 70%;
+    height: 3.5rem;
+    min-height: 1rem;
+    border-radius: .5rem;
+    padding: 1%;
+    background-color: var(--hover);
+    color: var(--text);
+    font-family: "options", monospace;
+    display: flex;
+    align-items: center;
+    overflow:auto;
+}
+
+.writeMessage > .writer > textarea{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    min-height: 100%;
+    font-size: 100%;
+    user-select: none;
+    border: none;
+    outline: none;
+    overflow: auto;
+    background: none;
+    resize: none;
+    color: var(--text);
+}
+
+
+
+.writeMessage > .send{
+    height: 3.5rem;
+    width: 3.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--hover);
+    border-radius: 100%;
+    fill: var(--text);
+    padding: 1%;
+    transition: background-color .1s, fill .1s;
+}
+
+.writeMessage > .send > svg{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.ready:hover{
+    background-color: var(--capi);
+    fill: #fff;
+}
+
+.active{
+    background-color: var(--capi);
+}
+
+

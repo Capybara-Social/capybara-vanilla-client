@@ -1,0 +1,325 @@
+:root{
+    background-color: var(--background);
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing:border-box;
+}
+
+html, body{
+    width: 100%;
+    height: 100%;
+    display: flex;
+}
+
+.content{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction:column;
+}
+
+.content > .title{
+    margin-top: 5%;
+    width: 100%;
+    align-items: center;
+    color: var(--text);
+    display: flex;
+    flex-direction: column;
+    font-family: "newWorld";
+    font-size: 3.5rem;
+}
+
+.content > .title > span:first-child > span{
+    color: var(--capi);
+}
+
+.content > .title > span:last-child{
+    display: flex;
+    align-items: center;
+}
+
+.content > .title > span:last-child > span:first-child{
+    margin-right: 1rem;
+}
+
+.content > .title > span:last-child > span:last-child{
+    content: "";
+    height: 90%;
+    margin-left: .25rem;
+    width: .25rem;
+    background-color: var(--text);
+    display: flex;
+    animation-name: blink;
+    animation-duration: .7s;
+    animation-iteration-count: infinite;
+    animation-timing-function: steps(5, start);
+    animation-fill-mode: none;
+}
+
+
+.content > .slider{
+    height: 100%;
+    overflow: hidden;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.card{
+    height: 50%;
+    width: 45%;
+    background-color: var(--input);
+    display: flex;
+    justify-content: space-between;
+    padding: 1%;
+    border-radius: .5rem;
+}
+
+
+
+.content > .slider > .card > .onDisplay{
+    height: auto;
+    width: 75%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.before, .after{
+    height: auto;
+    width: 5%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: .5rem;
+    transition: background-color .1s;
+}
+
+.before:hover, .after:hover{
+    cursor: pointer;
+    background-color: var(--hover);
+}
+
+.before > span, .after > span{
+    aspect-ratio: 1/1;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.before > span > svg, .after > span > svg{
+    height: 100%;
+    width: 100%;
+    fill: var(--text);
+}
+
+.after > span > svg{
+    rotate: 180deg;
+}
+
+.onDisplay{
+    opacity: 0;
+    animation: appear .1s ease-out 0s;
+    animation-iteration-count: 1;
+    animation-direction:normal;
+    animation-fill-mode: forwards;
+}
+
+
+
+.card > .onDisplay > span{
+    text-align: center;
+    color: var(--text);
+    font-size: 1.5rem;
+    font-family: "newWorld", monospace;
+}
+
+.card > .onDisplay > div{
+    width: 100%;
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.card > .onDisplay > div > input[type="date"],
+.card > .onDisplay > div > input[type="text"],
+.card > .onDisplay > div > input[type="email"],
+.card > .onDisplay > div > input[type="password"]
+{
+    background-color: var(--hover);
+    font-size: 1rem;
+    font-family: "options", monospace;
+    color: var(--text);
+    border: none;
+    outline: none;
+    width: 70%;
+    padding: 2.5%;
+    border-radius: .5rem;
+}
+
+.card > .onDisplay > div > button,
+.card > .onDisplay > div > a
+{
+    background-color: var(--hover);
+    font-size: 1rem;
+    font-family: "options", monospace;
+    color: var(--text);
+    border: none;
+    outline: none;
+    width: 70%;
+    padding: 2%;
+    border-radius: .5rem;
+    
+}
+.card > .onDisplay > div > button:focus-visible,
+.card > .onDisplay > div > a:focus-visible
+{border: #fff 2px solid;}
+
+.card > .onDisplay > div > span{
+    font-size: 1rem;
+    color: var(--text);
+    opacity: .5;
+    font-family: "capibara", monospace;
+    transition: opacity .25s;
+}
+
+.card > .onDisplay > div > .checker{
+    background-color: var(--hover);
+    font-size: .85rem;
+    color: var(--text);
+    font-family: "options", monospace;
+    width: 80%;
+    padding: 2.5%;
+    border-radius: .5rem;
+    display: flex;
+    gap: 5%;
+    align-items: center;
+    a:visited, a:link{color: var(--capi);}
+}
+
+.card > .onDisplay > div > .checker > input{
+    appearance: none;
+    position: relative;
+    cursor: pointer;
+    background-color: var(--input);
+    aspect-ratio: 2.5/1;
+    border-radius: 25px;
+    height: 1.5rem;
+    appearance: none;
+    transition: background-color .2s;
+}
+
+.card > .onDisplay > div > .checker > input::before{
+    width: 1rem;
+    top: 50%;
+    transform: translate(0, -50%);
+    aspect-ratio: 1/1;
+    left: 5%;
+    border-radius: 1rem;
+    position: absolute;
+    display: flex;
+    content: "";
+    background-color: var(--capi);
+    transition: left .2s, background-color .2s;
+}
+.card > .onDisplay > div > .checker > input:checked{
+    background-color: var(--capi);
+}
+
+
+.card > .onDisplay > div > .checker > input:checked::before{
+    left: 69.5%;
+    background-color: #fff;
+}
+
+
+.card > .onDisplay > div > button > svg{
+    aspect-ratio: 1/1;
+    height: 1.5rem;
+    fill: var(--text);
+}
+
+.card > .onDisplay > div > .waiting > svg{
+    animation: spin 1s linear none infinite;
+}
+
+svg[class=waiting]{
+    animation: spin 1s linear none infinite;
+}
+
+
+.card > .onDisplay > div > .done{
+    background-color: var(--capi);
+    font-size: 1rem;
+    transition: font-size .1s;
+}
+
+.card > .onDisplay > div > .done:hover{
+    font-size: 1.2rem;
+}
+
+.card > .onDisplay > div > svg{
+    aspect-ratio: 1/1;
+    height: 20%;
+    fill: var(--text);
+}
+
+.desapearhorz{
+    animation: desapearhorz .5s ease-out 0s;
+    animation-iteration-count: 1;
+    animation-direction:normal;
+    animation-fill-mode: forwards;
+}
+
+
+.desapearvert{
+    animation: desapearvert .5s ease-out 0s;
+    animation-fill-mode: forwards;
+}
+
+
+
+.visuallyhidden{
+    display: none;
+}
+
+@keyframes blink {
+    to{visibility: hidden;}
+}
+
+@keyframes spin {
+    to{transform: rotate(360deg);}
+}
+
+@keyframes desapearhorz{
+    to{
+        width: 0;
+        display: none;
+    }
+}
+@keyframes appear {
+    to{
+        opacity: 1;
+    }
+}
+
+@keyframes desappear {
+    to{
+        opacity: 0;
+    }
+}
+
+@keyframes desapearvert{
+    to{
+        height: 0;
+        display: none;
+    }
+}

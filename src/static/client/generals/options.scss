@@ -1,0 +1,390 @@
+
+.options > .icons > a > span{
+    font-family: "options", monospace;
+    font-size: 1rem;
+}
+
+.options > .user > span{
+    font-family: "options", monospace;
+    font-size: 1rem;
+}   
+
+.options{
+    position: fixed;
+    width: 15%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--input);
+    justify-content: space-around;
+    align-items: center;
+    fill: var(--text);
+    color: var(--text);
+    user-select: none;
+    overflow-y: auto;
+    left:0;
+}
+
+    .options > .user{
+        display: flex;
+        width: 90%;
+        height: 10%;
+        gap: 15%;
+        justify-content: center;
+        align-items: center;
+        border-radius: 1rem;
+        cursor: pointer;
+        transition: background-color .2s;
+        color: var(--text);
+        text-decoration: none;
+        font-family: "options", "emoji", monospace;
+        font-weight: 500;
+    }
+
+    .options > .user:hover{
+        background-color: var(--hover);
+    }
+
+    .options > .user > img{
+        aspect-ratio: 1/1;
+        height: 3.5rem;
+        border-radius: 100%;
+    }
+
+    .options > .icons{
+        display: flex;
+        flex-direction: column;
+        height: 60%;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+    }
+    .options > .icons > *{
+        display: flex;
+        width: 75%;
+        height: fit-content;
+        padding: 1rem;
+        align-items: center;
+        gap: 15%;
+        border-radius: 1rem;
+        transition: background-color .2s, scale 25ms;
+        cursor: pointer;
+    }
+
+    .options > .icons > *:hover{
+        background-color: var(--hover);
+    }
+
+    .options > .icons > *:active{
+        cursor: default;
+        scale: 95%;
+    }
+
+    .options > .icons > *:nth-child(1){
+        background-color: var(--capi);
+        fill: #fff;
+        color: #fff;
+    }
+
+    .options > .icons > *:hover:nth-child(2){
+        fill: var(--home);
+    }
+    .options > .icons > *:hover:nth-child(3){
+        fill: var(--explore);
+    }
+    .options > .icons > *:hover:nth-child(4){
+        fill: var(--notifications);
+    }
+    .options > .icons > *:hover:nth-child(5){
+        fill: var(--whispers);
+    }
+    .options > .icons > *:hover:nth-child(6){
+        fill: var(--saveds);
+    }
+    .options > .icons > *:hover:nth-child(7){
+        fill: var(--search);
+    }
+
+    .options > .icons > * > div{
+        width: 2rem;
+        height: 2rem;
+    }
+
+    .options > .icons > * > div > svg{
+        width: 2rem;
+        height: 2rem;
+        position: relative;
+    }
+
+
+    .options > .icons > *{
+        color: var(--text);
+        text-decoration: none;
+    }
+
+    .options > .icons > *:visited{
+        color: var(--text);
+        text-decoration: none;
+    }
+
+
+    .options > .icons > *:hover{
+        color: var(--text);
+        text-decoration: none;
+    }
+
+
+    .options > .icons > *:active{
+        color: var(--text);
+        text-decoration: none;
+    }
+
+
+    .options > .icons > *:link{
+        color: var(--text);
+        text-decoration: none;
+    }
+
+
+    .logo{
+        width: 40%;
+        height: 7.5%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+
+    .logo > svg{
+        width: 100%;
+        height: 100%;
+        fill: var(--capi);
+    }
+
+    
+
+    .noUser{
+        display: flex;
+        width: 90%;
+        height: 10%;
+        gap: 15%;
+        justify-content: center;
+        align-items: center;
+        border-radius: 1rem;
+        cursor: pointer;
+        transition: background-color .2s;
+        background-color: var(--hover);
+        font-family: "options", monospace;
+        font-size: 1vw;
+        transition: background-color .2s, font-size .2s, scale 25ms;
+        color: #fff;
+    }
+    
+    .noUser:hover{
+        background-color: var(--capi);
+        font-size: 1.25vw;
+    }
+    
+    .noUser:active{
+        scale: 95%;
+    }
+
+
+@media screen and (max-width: 1023px) {
+    .options > .user > span{
+        display: none;
+    }
+
+    .options > .user{
+        justify-content: center;
+        align-items: center;     
+        height: 10%;
+        width: auto;
+    }
+    
+    .options > .user:hover{
+            background-color: rgba(1, 1, 1, 0);
+        }
+    
+    .options > .icons > * > div{
+            width: 100%;
+            height: 2rem;
+            display: flex;
+            justify-content: center ;
+        }
+    .options > .icons > * > span{
+            display: none;
+        }
+    
+    
+    .logo{
+        width: 40%;
+        height: auto;
+    }
+    
+    .logo > img{
+        width: 100%;
+        height: 100%;
+    }  
+}    
+    
+@media screen and (max-height: 700px){
+        .logo{
+            display: none;
+        }
+}
+
+
+    .options{
+        transition: width .2s;
+    }
+    
+    .options > .icons > * > span{
+        transition: font-size .2s, display .2s;
+    }
+    
+    
+    .optionsNH{
+        width: 10%;
+    }
+    
+    .optionsNH > .user > span{
+        display: none;
+    }
+    
+    .optionsNH > .user{
+        justify-content: center;
+        align-items: center;     
+        height: 10%;
+        width: auto;
+    }
+    
+    .optionsNH > .user:hover{
+            background-color: rgba(1, 1, 1, 0);
+        }
+    
+    .optionsNH > .icons > * > div{
+            width: 100%;
+            height: 2rem;
+            display: flex;
+            justify-content: center ;
+        }
+    .optionsNH > .icons > * > span{
+            font-size: 0;
+            display: none;
+        }
+
+    
+        @media screen and (max-width: 1023px) {
+            .options > .user > span{
+                display: none;
+            }
+        
+            .options > .user{
+                justify-content: center;
+                align-items: center;     
+                height: 10%;
+                width: auto;
+            }
+        
+            .options > .user:hover{
+                background-color: rgba(1, 1, 1, 0);
+            }
+        
+            .options > .user > img{
+                height: auto;
+                width: 80%;
+            }
+        
+            .options > .icons > div > div{
+                width: 100%;
+                height: 2rem;
+                display: flex;
+                justify-content: center ;
+            }
+            .options > .icons > div > span{
+                display: none;
+            }
+        
+        
+            .logo{
+                width: 40%;
+                height: auto;
+            }
+        
+            .logo > img{
+                width: 100%;
+                height: 100%;
+            }
+        
+        
+        
+            .recommendations > .now > .trending > .trendsCont > section > a:last-child{
+                display: none;
+            }
+        
+            .recommendations > .now > .foryou > .fyCont > section > a:last-child{
+                display: none;
+            }
+        
+            .recommendations > .now > .trending > .trendsCont > section{
+                justify-content: center;
+            }
+        
+            .recommendations > .now > .foryou > .fyCont > section{
+                justify-content: center;
+            }
+        
+        }
+        
+        @media screen and (max-width: 800px) {
+            .mainContent{
+                width: 100%;    
+                height: 85%;
+            }
+            .recommendations{
+                display: none;
+            }
+            .scrollBar{
+                display: none;
+            }
+            .content{
+                display: flex;
+                flex-direction:column-reverse;
+            }
+
+            .options{
+                flex-direction: row;
+                width: 100%;
+                height: 15%;
+            }
+
+            .options > .icons{
+                flex-direction: row;
+                overflow-x: auto;
+                scrollbar-width: none;
+                height: 90%;
+                width: fit-content;
+            }
+            .logo{
+                display: none;
+            }
+            .user{
+                display: none;
+            }
+            #clientUser{
+                display: none;
+            }
+        }
+        
+        @media screen and (max-height: 700px){
+            .logo{
+                display: none;
+            }
+            .recommendations > .now > .trending > .trendsCont > section:last-child{
+                display: none;
+            }
+            .recommendations > .now > .foryou > .fyCont > section:last-child{
+                display: none;
+            }
+        }

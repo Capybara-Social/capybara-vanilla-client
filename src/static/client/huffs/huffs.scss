@@ -1,0 +1,395 @@
+
+
+:root{
+	background-color: var(--background);   
+}
+
+*{
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	transition: top .05s, left .05s, transform .05s;
+	font-size: 1rem;
+	font-family: "options", "emoji", monospace;
+}
+
+
+
+html,body{
+	height: 100%;
+	width: 100%;
+	display: flex;
+	justify-content: center;
+}
+
+.options{
+	width: 15% !important;
+}
+
+.mainContent{
+	width: 70%;
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: flex-start;
+	scrollbar-width: none;
+	gap: 5%;
+	position: absolute;
+    scrollbar-width: none;
+	left: 15%;
+}
+
+.goback{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	position: fixed;
+	left: 17%;
+	top: 5%;
+	aspect-ratio: 1/1;
+	height: 2.5rem;
+	background-color: var(--text);
+	backdrop-filter: opacity(.5);
+	transform:rotate(180deg);
+	fill: var(--background);
+	border-radius: 100%;
+}
+
+.goback > svg{
+	opacity: 1;
+	height: 60%;
+	aspect-ratio: 1/1;
+}
+
+.mainContent > .huff{
+	margin-top: 2.5%;
+}
+
+.mainContent > .comments{
+	width: 85%;
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 2.5rem;
+
+	> .comment{
+		width: 100%;
+		height: fit-content;
+		max-height: 35%;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		padding: 1%;
+		background-color: var(--input);
+		border-radius: .5rem;
+		
+
+		> .commenter{
+			width: 50%;
+			height: fit-content;
+			display: flex;
+			gap: 1rem;
+			> img{
+				height: 100%;
+				aspect-ratio: 1/1;
+				border-radius: 100%;
+			}
+			> .username{
+				display: flex;
+				flex-direction: column;
+				height: fit-content;
+				align-items: center;
+				justify-content: center;
+				font-family: "options", monospace;
+				> span:first-child{
+					color: var(--text);
+					font-size: 1rem;
+					font-weight: 500;
+				}
+				> span:last-child{
+					color: var(--capi);
+					font-size: .8rem;
+					opacity: .8;
+				}
+			}
+		}
+		> .commText{
+			width: 100%;
+			height: fit-content;
+			color: var(--text);
+			font-size: 1rem;
+			font-family: "options", monospace;
+		}
+		> .button{
+			width: 100%;
+			height: 15%;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			> span{
+				width: 30%;
+				height: 100%;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				border-radius: .5rem;
+				transition: background-color .1s;
+				> svg{
+					height: 80%;
+					fill: var(--text);
+					aspect-ratio: 1/1;
+				}
+				
+			}
+			> span:hover{
+				background-color: var(--hover);
+			}
+		}
+
+		> .showMore{
+			width: 100%;
+			height: 10%;
+			display: flex;
+			justify-content: center;
+			border-radius: .5rem;
+			align-items: center;
+			background-color: var(--hover);
+			> svg{
+				rotate: 180deg;
+				height: 100%;
+				aspect-ratio: 1/1;
+			}
+		}
+	}
+}
+
+.mainContent > .yourComment{
+	width: 85%;
+	height: fit-content;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	padding: 1%;
+	background-color: var(--input);
+	border-radius: .5rem;
+	gap: 1rem;
+		> .commenter{
+			width: 50%;
+			height: fit-content;
+			display: flex;
+			gap: 1rem;
+			> img{
+				height: 100%;
+				aspect-ratio: 1/1;
+				border-radius: 100%;
+			}
+			> .username{
+				display: flex;
+				flex-direction: column;
+				height: fit-content;
+				align-items: center;
+				justify-content: center;
+				font-family: "options", monospace;
+				> span:first-child{
+					color: var(--text);
+					font-size: 1rem;
+					font-weight: 500;
+				}
+				> span:last-child{
+					color: var(--capi);
+					font-size: .8rem;
+					opacity: .8;
+				}
+			}
+		}
+		> .commText{
+			width: 100%;
+			height: fit-content;
+			padding: 1%;
+			border-radius: .5rem;
+			color: var(--text);
+			font-size: 1rem;
+			font-family: "options", "emoji", monospace;
+			background-color: var(--hover);
+			resize: none;
+			outline: none;
+			border: none;
+		}
+		> span{
+			color: var(--text);
+			font-size: 1rem;
+			font-family: "options", monospace;
+		}
+		> button{
+			fill: var(--text);
+			background-color: var(--hover);
+			aspect-ratio: 1/1;
+			width: 3.5%;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			outline: none;
+			border: none;
+			border-radius: 100%;
+			> svg{
+				height: 75%;
+				aspect-ratio: 1/1;
+			}
+		}
+		> .postButton{
+			width: 100%;
+			display: flex;
+			justify-content: end;
+			> button{
+			   width: 20%;
+			   aspect-ratio: 2.35/.5;
+			   font-family: "options", monospace;
+			   font-weight: 400;
+			   border-radius: .5rem;
+			   color: var(--text);
+			   background-color: var(--hover);
+			   outline: none;
+			   border: none;
+			   transition: background-color .2s, color .2s, font-weight .2s;
+		   }
+		   > .ready{
+				background-color: var(--capi);
+				color: #fff;
+				font-weight: 500;
+				cursor: pointer;
+		   }
+		}
+}
+
+
+.recommendations{
+    height: 100%;
+    width: 15%;
+    background-color: var(--input);
+    display: flex;
+    flex-direction: column;
+    justify-content:space-around;
+    align-items: center;
+	position: fixed;
+	left: 85%;
+}
+
+.recommendations > .now > .trending > .trendsCont{
+    font-family: "options";
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+.recommendations > .now > .people > .ppCont{
+    font-family: "options";
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+
+
+.recommendations > .search {
+    width: 90%;
+    height: 5%;
+    border-radius: 5rem;
+    display: flex;
+    background-color: var(--hover);
+    gap: 1rem;
+    border: .5rem solid var(--hover);
+    align-items: center;
+    justify-content: center;
+}
+
+.recommendations > .search > svg{
+    width: 10%;
+    fill: var(--text);
+}
+
+.recommendations > .now > .search > .filled{
+    fill: var(--capi);
+    cursor: pointer;
+}
+
+.recommendations > .search > input{
+    background-color: var(--hover);
+    width: 85%;
+    height: 90%;
+    border: none;
+    color: var(--text);
+    user-select: none;
+    outline: none;
+}
+
+.recommendations > .now{
+    width: 100%;
+    height: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.recommendations > .now > div{
+    padding: 5%;
+    background-color: var(--hover);
+    width: 90%;
+    height: 45%;
+    border-radius: 1rem;
+}
+
+.recommendations > .now > div > span{
+    width: 100%;
+    justify-content: center;
+    display: flex;
+    color: var(--text);
+    font-family: "options", monospace;
+    font-size: 1rem;
+    user-select: none;
+}
+.recommendations > .now > div > div{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    height: 90%;
+    justify-content: space-around;
+}
+
+.recommendations > .now > div > div > a{
+    display: flex;
+    padding: 7.5% 0 7.5% 0 ;
+    border-radius: 1rem;
+    justify-content: space-around;
+    background-color: var(--input);
+    color: var(--text);
+    text-decoration: none;
+    cursor: pointer;
+    transition: background-color .2s;
+}
+
+.recommendations > .now > div > div > a:hover{
+    background-color: var(--capi);
+}
+
+.recommendations > .now > div > div > a > span{
+    color: var(--text);
+    text-decoration: none;
+    user-select: none;
+}
+
+.recommendations > .now > div > div > a > span:visited{
+    color: var(--text);
+    text-decoration: none;
+}
+
+@media screen and (max-width: 800px) {
+	.mainContent{
+		width: 100%;
+		height: 85%;
+	}
+	.options{
+		width: 100%;
+		height: 15%;
+	}
+}

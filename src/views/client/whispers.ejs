@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en" theme="dark" menuStyle="2" urlUsed="<%-coming%>" serverKey="<%-serverKey%>">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Whispers | Capybara</title>
+	<link rel="shortcut icon" href="<%-coming%>/src/capi.svg" type="image/x-icon">
+</head>
+<body>
+	<%-include("templates/baseMenu")%>
+	<%-include("templates/showcase")%>
+		<%-include("templates/options")%> 
+		<section class="mainContent" id="mainContent">
+			<div class="contacts">
+				<span>Contacts</span>
+				<div id="conContent" class="conContent">
+					<div id="contact" class="contact">
+						<div><img src="http://127.0.0.1:8080/src/brown.png"></div>
+						<div>
+							<span>Contacter</span>
+							<span>last message</span>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="current">
+				<div class="contDisplay">
+					<div><img src="<%-coming%>/src/brown.svg" alt="" id="currImg"></div>
+					<div>
+						<span id="currUsername">Username</span>
+						<span id="currDesc">This is a description lmao</span>
+					</div>
+					<div>
+						<span></span>
+						<span></span>
+						<span>
+							<div><%-icons.info%></div>
+						</span>
+					</div>
+				</div>
+				<div class="curCont" id="curCont">
+					<div class="message you">
+						<div class="usrImg"><img src="http://127.0.0.1:8080/src/brown.png" alt=""></div>
+						<div class="messageCont">
+							<div class="messageText" >
+								hellooo
+							</div>
+							<div class="messageMultimedia">
+								<img src="https://images.pexels.com/photos/1525041/pexels-photo-1525041.jpeg?cs=srgb&dl=pexels-francesco-ungaro-1525041.jpg&fm=jpg" alt="">
+							</div>
+							<div class="messagePosts"></div>
+						</div>
+					</div>
+					<div id="message" class="message me">
+						<div class="usrImg"><img src="http://127.0.0.1:8080/src/brown.png" alt=""></div>
+						<div class="messageCont">
+							<span class="messageText">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</span>
+							<div class="messageMultimedia"></div>
+							<div class="messagePosts"></div>
+						</div>
+					</div>
+				</div>
+				<div class="writeMessage">
+					<div class="addZone">
+						<span id="addEmoji" class="addEmoji"><%-icons.emoji%></span>
+						<span id="addMultimedia" class="addMultimedia"><%-icons.add%></span>
+					</div>
+					 <div  id="writer" class="writer">
+						<textarea id="textInput" placeholder="Escribe tu mensaje"></textarea>
+					 </div>	
+					 <span id="send" class="send notReady"><%-icons.up%></span>
+				</div>
+			</div>
+		</section>
+		<div class="scrollBar" id="scrollbar">
+			<div id="scrollbarSec"></div>
+		</div>
+</body>
+<%-include("templates/classes") %>
+<%-include("templates/loading") %>
+<script src="<%-coming%>/whispers/bundle.js"></script>
+<!-- Sender script -->
+<script>
+	let sendBtn = document.getElementById("send");
+	let writer = document.getElementById("textInput");
+	writer.style.height = `${writer.clientHeight}px`;
+	console.log(writer.clientHeight)
+	writer.oninput = (data) => {
+		if(writer.value.length <= 0){
+			sendBtn.classList.remove("ready")
+			sendBtn.classList.add("notReady");
+		}else{
+			sendBtn.classList.remove("notReady")
+			sendBtn.classList.add("ready");
+		}
+	}
+
+</script>
+
+<script>
+	let plantilla = document.getElementById("message").cloneNode(true);
+	plantilla.classList.remove("me");
+	plantilla.id = "";
+	document.getElementById("message").remove();
+	function addMessage(from, text, adjs, user){
+		if(typeof from != "string" || typeof text != "string" || !(adjs instanceof Array) || !(user instanceof User)) return Error("Not valid data");
+		if(from != "you" && from != "me") return Error("Not valid data");
+		if(text.length > 512 || text.length < 0) return Error("Not valid data");
+		if(text.length <= 0 && Object.keys(adjs).length <= 0) return Error("Not valid data");
+		if(adjs.length > 4) return Error("Not valid data");
+		let instance = plantilla.cloneNode(true);
+		instance.classList.add(from);
+		let content = instance.children[1];
+		//text
+		if(text.length <= 0) content.children[0].remove();
+		else content.children[0].innerText = String(text);
+
+
+		//adjs
+		if(adjs.length <= 0){
+			 content.children[1].remove();
+			 content.children[2].remove();
+		}else{
+
+			if(adjs.filter(x => (x.hasOwnProperty("type") && x.hasOwnProperty("uri"))).length != adjs.length) return Error("Not valid data");
+			let post;
+			if(adjs.filter(x => x["type"] == "post").length >= 1){
+				let post = adjs.filter(x => x["type"] == "post")[0]["uri"];
+
+				
+				content.children[1].remove();
+				content.children[2].onclick = () =>  window.location.replace("<%-coming%>/posts/" + post.id);
+				
+
+				content.children[2]
+			}else{
+				content.children[2].remove();
+			}
+		}
+
+		return instance;
+	}
+</script>
+</html>

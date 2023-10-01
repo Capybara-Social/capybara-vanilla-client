@@ -1,0 +1,213 @@
+/*
+Hi user! 
+It looks like you like visting the CSS of Capibara!
+Well, this file was written by me, the creator. 
+I love frontend and all that stuff but I have to say
+that I'm kinda bad at it. Most time I don't understand
+what I have made and how it works... but it does!
+
+If you have any suggest for enhacing this css
+please contact me!
+
+Kisses~
+*/
+
+
+[theme=dark]{
+    --background: #010101;
+    --text: #fff;
+    --input: #1e1e1e;
+    --hovered: #f83f03 /*#531601*/;
+    --capi: #a52a02;
+    --shadow: #b4b4b4;
+}
+
+[theme=light]{
+    --background: #fff;
+    --text: #010101;
+    --input: #e1e1e1;
+    --hovered: #f83f03;
+    --capi: #a52a02;
+    --shadow:#b4b4b4;
+}
+
+.themeSwitch{
+	cursor: pointer;
+	position: absolute;
+	top: 5%;
+	left: 92.5%;
+    padding: .5rem;
+    border-radius: 50px;
+    width: 3.5rem;
+    height: 3.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: .25rem solid var(--text);
+    transition: background-color .2s, border .2s;
+}
+
+.themeSwitch > svg{
+	fill: var(--text);
+    width: 95%;
+    height: 95%;
+}
+
+.themeSwitch:hover{
+    background-color: var(--capi);
+    border: 0 solid var(--text);
+}
+
+
+:root{
+ background-color: var(--background);   
+}
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+	
+}
+
+body{
+    overflow: hidden;
+}
+
+.title{
+    position: absolute;
+    left: 25%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: var(--text);
+}
+
+.title > h1{
+    font-size: 350%;
+    font-family: "newWorld";
+    opacity: 0;
+    animation-name: appear;
+    animation-duration: 1.5s;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode:both;
+    text-shadow: .2rem .2rem var(--hover);
+    font-weight: normal;
+
+
+}
+
+.title > h1 > span{
+    color: #a52a02;
+}
+
+.title > h2{
+    font-size: 150%;
+    font-family: "newWorld";
+    font-weight: normal;
+    animation-name: appear;
+    animation-duration: 1.5s;
+    animation-delay: 1s;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode:both;
+}
+
+.title > h2 > span{
+    color: #a52a02;
+}
+
+.logo{
+    position: absolute;
+    left: 2.5%;
+    top: 2.5%;
+}
+
+
+.logo > img{
+    cursor: pointer;
+    filter: drop-shadow(.2rem .2rem var(--hover));
+}
+
+@keyframes appear {
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+
+.login{
+    display: flex;
+    flex-direction: column;
+    width: 25rem;
+    color: var(--text);
+    gap: .5rem;
+    position: absolute;
+    left: 70%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.login > section{
+    display: flex;
+    flex-direction: column;
+}
+
+.login > section > span{
+    padding: .5rem;
+    font-size: 1.5rem;
+    font-family: "capibara";
+    font-weight: 600;
+}
+
+.login > section > input{
+    height: 2.5rem;
+    padding: 1rem;
+    border-radius: 1rem;
+    background-color: var(--input);
+    color: var(--text);
+    border: none;
+    transition: color 0s;
+}
+
+
+.login > section > input:focus{
+    outline: none;
+}
+
+
+
+.login > button{
+    background-color: var(--input);
+    border: none;
+    padding: .75rem;
+    border-radius: .5rem;
+    font-family: "newWorld";
+    font-size: 1.25rem;
+    color: var(--text);
+    transition: font-size .2s, color .2s, background-color .2s;
+    cursor: pointer;
+}
+
+.login > button:hover{
+    background-color: var(--capi);
+    font-size: 1.5rem;
+    color: #fff;
+}
+
+.login > span{
+    font-size: 1rem;
+    color: var(--text);
+    font-family: "newWorld"
+}
+
+.login > span > a{
+    color: var(--capi);
+    font-family: "newWorld";
+    cursor: pointer;
+}
+
+
+@media screen and (max-width: 800px) {
+
+}
