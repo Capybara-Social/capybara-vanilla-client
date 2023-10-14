@@ -14,6 +14,7 @@ We think that all this frameworks may cause different sites to be (sometimes) sl
 
 - [Webpack](https://www.npmjs.com/package/webpack)
 - [Webpack-CLI](https://www.npmjs.com/package/webpack-cli)
+- [html-webpack-plugin](https://www.npmjs.com/package/html-webpack-plugin)
 - [EJS](https://www.npmjs.com/package/ejs)
 - [@capybara-social/daniel](https://www.npmjs.com/package/@capybara-social/daniel)
 - [Sass](https://www.npmjs.com/package/sass)

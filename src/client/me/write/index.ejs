@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en" theme="dark" menuStyle="2">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>New Huff | Capybara</title>
+    <link rel="shortcut icon" href="/client/src/capi.svg" type="image/x-icon">
+</head>
+<body>
+    <%-include("../../templates/baseMenu")%>
+    <%-include("../../templates/showcase")%>
+        <%-include("../../templates/options")%>
+        <section class="mainContent">
+            <div id="noAcc" class="noAcc">
+                <span>Hey! You need an account to publish a post! <a href="/client/signup/">Get one now!</a></span>
+            </div>
+            <div class="writer">
+                <span>Lets make a huff</span>
+                <textarea placeholder="Hey! Say something!" id="text"></textarea>
+                <span id="defaults">Characters: 0/512 | Categories: 0/5 | Mentions: 0/5</span>
+                <label for="adjs" id="imgDrag" ondragover="handleDrag(event)" ondrop="handleDrop(event)">
+                    <span>Throw a video/image or click right here</span>
+                    <input id="adjs" type="file" accept=".jpg, .jpeg, .png, .gif, .mp4, .ogg, .webm">
+                </label>
+                <div class="addeds" id="addeds">
+
+                </div>
+                <div class="send" ><button id="sender">Send</button></div>
+            </div>
+            <div class="exampler">
+                <%-include("../../templates/huff")%>
+            </div>
+        </section>
+</body>
+
+<%-include("../../templates/classes") %>
+<%-include("../../templates/loading") %>
+</html>

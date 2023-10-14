@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en" theme="dark" menuStyle="2">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notifications | Capybara</title>
+	<link rel="shortcut icon" href="/client/src/capi.svg" type="image/x-icon">
+</head>
+<body>
+    <%-include("../templates/baseMenu")%>
+    
+    <%-include("../templates/options") %>
+    <section class="mainContent">
+        <div class="generalNots nots">
+            <span >General</span>
+            <div class="genCont" id="genCont">
+                <span class="notification" id="notTemplate">
+                    <span class="icon"><%-icons.settings%></span>
+                    <div class="content">
+                        <span>Notificacion de prueba</span>
+                        <span>Subtitulo</span>
+                    </div>
+                </span>
+            </div>
+        </div>
+        <div class="followingNots nots">
+            <span>Following</span>
+            <div class="follCont" id="follCont">
+
+            </div>
+        </div>
+    </section>
+</body>
+<%-include("../templates/loading") %>
+</html>

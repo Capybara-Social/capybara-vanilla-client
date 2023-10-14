@@ -1,0 +1,13 @@
+*{
+    scroll-behavior: smooth;
+    scrollbar-color: var(--capi) var(--hover);
+}
+
+*::-webkit-scrollbar{
+    width: .5rem;
+    background-color: var(--hover);
+}
+
+*::-webkit-scrollbar-thumb{
+    background-color: var(--capi);
+}
