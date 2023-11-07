@@ -347,23 +347,24 @@
         @media screen and (max-width: 800px) {
             .mainContent{
                 width: 100%;    
-                height: 85%;
+                height: 80%;
+                position: absolute;
+                left: 0;
             }
             .recommendations{
-                display: none;
-            }
-            .scrollBar{
                 display: none;
             }
             .content{
                 display: flex;
                 flex-direction:column-reverse;
             }
-
             .options{
                 flex-direction: row;
+                position: fixed;
+                top: 85%;
                 width: 100%;
                 height: 15%;
+                z-index: 3;
             }
 
             .options > .icons{

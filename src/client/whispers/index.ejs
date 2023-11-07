@@ -5,18 +5,18 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Whispers | Capybara</title>
-	<link rel="shortcut icon" href="/client/src/capi.svg" type="image/x-icon">
+	<link rel="shortcut icon" href="/client/_src/capi.svg" type="image/x-icon">
 </head>
 <body>
-	<%-include("../templates/baseMenu")%>
-	<%-include("../templates/showcase")%>
-		<%-include("../templates/options")%> 
+	<%-include("../_templates/baseMenu")%>
+	<%-include("../_templates/showcase")%>
+		<%-include("../_templates/options")%> 
 		<section class="mainContent" id="mainContent">
 			<div class="contacts">
 				<span>Contacts</span>
 				<div id="conContent" class="conContent">
 					<div id="contact" class="contact">
-						<div><img src="http://127.0.0.1:8080/src/brown.png"></div>
+						<div><img src="/client/_src/brown.png"></div>
 						<div>
 							<span>Contacter</span>
 							<span>last message</span>
@@ -26,7 +26,7 @@
 			</div>
 			<div class="current">
 				<div class="contDisplay">
-					<div><img src="/client/src/brown.svg" alt="" id="currImg"></div>
+					<div><img src="/client/_src/brown.svg" alt="" id="currImg"></div>
 					<div>
 						<span id="currUsername">Username</span>
 						<span id="currDesc">This is a description lmao</span>
@@ -41,7 +41,7 @@
 				</div>
 				<div class="curCont" id="curCont">
 					<div class="message you">
-						<div class="usrImg"><img src="http://127.0.0.1:8080/src/brown.png" alt=""></div>
+						<div class="usrImg"><img src="/client/_src/brown.png" alt=""></div>
 						<div class="messageCont">
 							<div class="messageText" >
 								hellooo
@@ -53,7 +53,7 @@
 						</div>
 					</div>
 					<div id="message" class="message me">
-						<div class="usrImg"><img src="http://127.0.0.1:8080/src/brown.png" alt=""></div>
+						<div class="usrImg"><img src="/client/_src/brown.png" alt=""></div>
 						<div class="messageCont">
 							<span class="messageText">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</span>
 							<div class="messageMultimedia"></div>
@@ -73,12 +73,10 @@
 				</div>
 			</div>
 		</section>
-		<div class="scrollBar" id="scrollbar">
-			<div id="scrollbarSec"></div>
-		</div>
 </body>
-<%-include("../templates/classes") %>
-<%-include("../templates/loading") %><!-- Sender script -->
+<%-include("../_templates/classes") %>
+<%-include("../_templates/loading") %>
+<!-- Sender script -->
 <script>
 	let sendBtn = document.getElementById("send");
 	let writer = document.getElementById("textInput");

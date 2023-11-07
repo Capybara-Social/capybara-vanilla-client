@@ -5,7 +5,7 @@
 const {KeyPair, encryptWithPassword} = require("@capybara-social/daniel");
 let keys = new KeyPair();
 
-let icons = require("../generals/icons");
+let icons = require("../_generals/icons");
 let coming = "/client";
 let finalUser ={
 	username: "",

@@ -3,8 +3,8 @@
 let plantilla = document.getElementById("huff").cloneNode(true);
 document.getElementById("huff").remove();
 plantilla.id = ""
-const coming = document.documentElement.getAttribute("urlUsed");
-const videoLoad = require("../generals/videoPlayer.js")
+const coming = "/client";
+const videoLoad = require("../_generals/videoPlayer.js")
 const mainC = document.getElementById("mainContent")
 
 import { textParser } from "./validator.js";

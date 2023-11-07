@@ -1,20 +1,20 @@
 //JS
 const loadHuff = require('./addPost')
-require('../../generals/theme.js')
-require('../../generals/showcase.js')
-require('../../generals/userLoad.js')
-require('../../generals/menu.js')
+require('../../_generals/theme.js')
+require('../../_generals/showcase.js')
+require('../../_generals/userLoad.js')
+require('../../_generals/menu.js')
 
 //CSS
-require('../../generals/colors.scss')
-require('../../generals/huff.scss')
+require('../../_generals/colors.scss')
+require('../../_generals/huff.scss')
 require("./saveds.scss")
-require('../../generals/options.scss')
-require('../../generals/showcase.scss')
-require('../../generals/videoPlayer.scss')
-require('../../generals/menu.scss')
-require('../../generals/fonts.scss')
-require('../../generals/scrollbar.scss')
+require('../../_generals/options.scss')
+require('../../_generals/showcase.scss')
+require('../../_generals/videoPlayer.scss')
+require('../../_generals/menu.scss')
+require('../../_generals/fonts.scss')
+require('../../_generals/scrollbar.scss')
 
 //Vars
 const mainC = document.getElementById("mainContent");
@@ -43,7 +43,7 @@ document.getElementById("saveds").onclick = () => {mainC.scrollTop = 0;};
     let myPost =  new Post(myUser, 
     'Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum', 
     [
-    {uri: coming +'/src/sensual.mp4', type:"video"},
+    {uri: coming +'/_src/sensual.mp4', type:"video"},
     ],
      Date.now(), "sexo") 
 
@@ -51,8 +51,8 @@ document.getElementById("saveds").onclick = () => {mainC.scrollTop = 0;};
     'Lorem dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum', 
     [
     {uri: 'https://thumbs.dreamstime.com/b/environment-earth-day-hands-trees-growing-seedlings-bokeh-green-background-female-hand-holding-tree-nature-field-gra-130247647.jpg', type:"img"},
-    {uri: coming +'/src/sensual.mp4', type:"video"},
-    {uri: coming + '/src/sensual.mp4', type:"video"},
+    {uri: coming +'/_src/sensual.mp4', type:"video"},
+    {uri: coming + '/_src/sensual.mp4', type:"video"},
     {uri: 'https://upload.wikimedia.org/wikipedia/commons/thumb/b/b6/Image_created_with_a_mobile_phone.png/1200px-Image_created_with_a_mobile_phone.png', type:"img"},
     ],
      Date.now(), "sexo")

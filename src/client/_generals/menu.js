@@ -1,11 +1,13 @@
 let menuTemplate = document.getElementById("menuOptions");
 let optTemplate = document.createElement("div");
 
-let {saveTheme, saveColors} = require("../generals/theme")
+let {saveTheme, saveColors} = require("../_generals/theme")
 optTemplate.append(document.createElement("span"));
 optTemplate.append(document.createElement("span"));
 
 const icons = require("./icons.json")
+
+
 
 
 function loadMenu(menu){
@@ -147,6 +149,13 @@ let privacy_options = [
 preloadBaseMenu(privacy_options, menuPrivacy);
 
 loadMenu(menuDefault)
+
+document.getElementById("deMenu").addEventListener("click", (event) => {
+    if(event.target.id == "deMenu"){
+        loadMenu(menuDefault);
+        return document.getElementById('deMenu').classList.remove('front')
+    }
+})
 
 module.exports = loadMenu;
 

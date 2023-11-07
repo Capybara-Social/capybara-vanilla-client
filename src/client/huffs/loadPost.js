@@ -1,6 +1,6 @@
 let plantilla = document.getElementById("huff").cloneNode(true);
 const coming = "/client";
-const videoLoad = require("../generals/videoPlayer.js")
+const videoLoad = require("../_generals/videoPlayer.js")
 const mainC = document.getElementById("mainContent")
 
 function textParser(unsafe){

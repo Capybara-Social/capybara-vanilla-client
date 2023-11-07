@@ -5,12 +5,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>New Huff | Capybara</title>
-    <link rel="shortcut icon" href="/client/src/capi.svg" type="image/x-icon">
+    <link rel="shortcut icon" href="/client/_src/capi.svg" type="image/x-icon">
 </head>
 <body>
-    <%-include("../../templates/baseMenu")%>
-    <%-include("../../templates/showcase")%>
-        <%-include("../../templates/options")%>
+    <%-include("../../_templates/baseMenu")%>
+    <%-include("../../_templates/showcase")%>
+        <%-include("../../_templates/options")%>
         <section class="mainContent">
             <div id="noAcc" class="noAcc">
                 <span>Hey! You need an account to publish a post! <a href="/client/signup/">Get one now!</a></span>
@@ -29,11 +29,10 @@
                 <div class="send" ><button id="sender">Send</button></div>
             </div>
             <div class="exampler">
-                <%-include("../../templates/huff")%>
+                <%-include("../../_templates/huff")%>
             </div>
         </section>
 </body>
-
-<%-include("../../templates/classes") %>
-<%-include("../../templates/loading") %>
+<%-include("../../_templates/classes") %>
+<%-include("../../_templates/loading") %>
 </html>

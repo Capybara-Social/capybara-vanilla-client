@@ -186,6 +186,27 @@ function videoLoad(el){
         loaded = 1;
     }
 
+    let counter = 0;
+    setInterval(() => {
+            if(counter <= 0) {
+                counter = 0;
+                container.classList.remove("hovered");
+            } else {
+                counter = counter - 1;
+            }
+        }, 1000)
+
+    container.addEventListener("mousemove", () => {
+        container.classList.add("hovered");
+        counter = 2;
+    })
+
+
+    container.addEventListener("mouseleave", () => {
+        container.classList.remove("hovered");
+        counter = 0;
+    })
+
     return container;
 }
 

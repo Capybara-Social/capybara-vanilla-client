@@ -18,7 +18,7 @@ let user = localStorage.getItem("user") || false;
     }else{
         user = JSON.parse(user);
         clientUser.children[0].innerText = user.username;
-        clientUser.children[1].setAttribute("src", user.image || `${coming}/src/brown.png`);
+        clientUser.children[1].setAttribute("src", user.image || `${coming}/_src/brown.png`);
         clientUser.href = `${coming}/me/`;
     }
 

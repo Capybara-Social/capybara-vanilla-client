@@ -1,11 +1,11 @@
-@import '../generals/colors.scss';
-@import '../generals/fonts.scss';
-@import '../generals/huff.scss';
-@import '../generals/options.scss';
-@import '../generals/scrollbar.scss';
-@import '../generals/showcase.scss';
-@import '../generals/videoPlayer.scss';
-@import '../generals/menu.scss';
+@import '../_generals/colors.scss';
+@import '../_generals/fonts.scss';
+@import '../_generals/huff.scss';
+@import '../_generals/options.scss';
+@import '../_generals/scrollbar.scss';
+@import '../_generals/showcase.scss';
+@import '../_generals/videoPlayer.scss';
+@import '../_generals/menu.scss';
 
 
 
@@ -38,65 +38,64 @@ html,body{
     justify-content: space-between; 
     position: fixed;
     left: 15%;
+    overflow-y: scroll;
 }
 
 .mainContent > .search {
-    width: 83.5%;
+    width: 82.75%;
+    min-height: 3.5rem;
     height: 7.5%;
     display: flex;
     gap: 1.5rem;
-    background-color: var(--input);
+    background-color: var(--hover);
     padding: .5rem;
     align-items: center;
     border-radius: .5rem;
     left: 15.5%;
     position: fixed;
+    border: 1px solid rgba(255, 255, 255, .25);
+    z-index: 1;
 }
 
-.mainContent > .search > div {
-    aspect-ratio: 1/1;
-    height: 100%;
+.mainContent > .search > .searchBar{
+    width: 100%;
+    height: 3.5rem;
+    gap: 1rem;
     display: flex;
     align-items: center;
-    padding: .5rem;
-    justify-content: center;
-    border-radius: 100%;
-    transition: background-color .1s;
 }
-
-.mainContent > .search > div:hover {
-    background-color: var(--hover);
-}
-
-
-.mainContent > .search > div > svg {
+.mainContent > .search > .searchBar > div{
+    display: flex;
     height: 80%;
+    align-items: center;
+    justify-content: center;
+    aspect-ratio: 1/1;
+}
+.mainContent > .search > .searchBar > div > svg{
+    display: flex;
+    height: 65%;
     aspect-ratio: 1/1;
     fill: var(--text);
-    transition: fill .1s;
 }
 
-.mainContent > .search > div:hover > svg {
-    fill: var(--capi);
-}
 
-.mainContent > .search > input {
+.mainContent > .search > .searchBar > input{
+    height: 70%;
     width: 100%;
-    height: 100%;
+    background-color: var(--hover);
     color: var(--text);
-    background-color: var(--input);
-    border: none;
     outline: none;
+    border: none;
 }
 
 .mainContent > .columnContainer {
     width: 100%;
     height: 90%;
     display: flex;
-    overflow-y: scroll;
+    overflow-y: visible;
     justify-content: space-between;
     position: absolute;
-    top: 10%;
+    top: 12.5%;
     left: 0;
 }
 
@@ -136,6 +135,15 @@ html,body{
 }
 
 @media screen and (max-width: 800px) {
+    .mainContent{
+        left: 0;
+        margin-left: 0;
+    }
+
+    .mainContent > .search {
+        left: 50%;
+        transform: translate(-50%, 0);
+    }
     .four, .triple, .two{
         height: 10rem;
     }

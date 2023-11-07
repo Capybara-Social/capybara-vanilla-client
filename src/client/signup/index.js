@@ -6,6 +6,6 @@ require("./slides");
 
 
 //CSS
-require("../generals/colors.scss");
+require("../_generals/colors.scss");
 require("./signup.scss");
-require("../generals/fonts.scss");
+require("../_generals/fonts.scss");

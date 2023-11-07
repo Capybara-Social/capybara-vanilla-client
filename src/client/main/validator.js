@@ -1,4 +1,4 @@
-const coming = document.documentElement.getAttribute("urlUsed")
+const coming = "/client"
 function textParser(unsafe){
     let cats = 0;
     let ments = 0;

@@ -9,6 +9,11 @@
     justify-content: center;
     align-items: center;
     position: relative;
+    cursor: none;
+}
+
+.videoPlayer.hovered{
+    cursor: auto;
 }
 
 .videoPlayer::before{
@@ -89,7 +94,7 @@
     transition: filter .1s;
 }
 
-.videoPlayer:hover > .controls{
+.videoPlayer.hovered > .controls{
     filter: opacity(1);
 }
 
@@ -111,8 +116,8 @@
 
 }
 
-.videoPlayer:hover > .controls > * > span > svg,
-.videoPlayer:hover > .controls > * > span > span > svg
+.videoPlayer.hovered > .controls > * > span > svg,
+.videoPlayer.hovered > .controls > * > span > span > svg
 {
     width: 100%;
     height: auto;

@@ -1,17 +1,17 @@
 //JS
 const addNot = require('./notAdd.js')
-require('../generals/theme.js')
-require('../generals/userLoad.js')
-require('../generals/menu.js')
+require('../_generals/theme.js')
+require('../_generals/userLoad.js')
+require('../_generals/menu.js')
 
 //CSS
-require('../generals/colors.scss')
-require('../generals/huff.scss')
+require('../_generals/colors.scss')
+require('../_generals/huff.scss')
 require('./notifi.scss')
-require('../generals/options.scss')
-require('../generals/scrollbar.scss')
-require('../generals/menu.scss')
-require('../generals/fonts.scss')
+require('../_generals/options.scss')
+require('../_generals/scrollbar.scss')
+require('../_generals/menu.scss')
+require('../_generals/fonts.scss')
 
 //vars
 const coming = "/client"
@@ -23,7 +23,7 @@ for(i=0; i < 12; i++){
     let ran = ["like", "comment", "follow", "nashe"];
     ran = ran[Math.floor(Math.random() * ran.length)];
     genList.prepend(addNot("TEST", "This is a test!", ran));
-    folList.prepend(addNot("TEST", "This is a test!", ran, coming + "/src/sensual.mp4"));
+    folList.prepend(addNot("TEST", "This is a test!", ran, coming + "/_src/sensual.mp4"));
 }
 
 //options

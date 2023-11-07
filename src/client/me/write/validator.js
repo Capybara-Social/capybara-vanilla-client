@@ -1,4 +1,4 @@
-const {user} = require('../../generals/userLoad.js');
+const {user} = require('../../_generals/userLoad.js');
 const {validator} = require('./writer.js');
 
 const coming = document.documentElement.getAttribute("urlUsed")

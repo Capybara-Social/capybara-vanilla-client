@@ -4,7 +4,7 @@ let plantilla = document.getElementById("huff");
 let columns = mainC.children[1].children;
 let colCounter = 0;
 const coming = "/client"
-const videoLoad = require("../generals/videoPlayer");
+const videoLoad = require("../_generals/videoPlayer");
 import { textParser } from "./validator";
 
 function loadHuff(huff){

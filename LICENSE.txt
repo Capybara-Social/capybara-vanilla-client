@@ -1,0 +1,38 @@
+SOFTWARE LICENSE AGREEMENT
+
+This Software License Agreement ("Agreement") is entered into between the copyright holder (hereinafter referred to as "Licensor") and any person acquiring, downloading, or using the Software (hereinafter referred to as "Licensee").
+
+1. DEFINITIONS
+   a. "Software" refers to the social network client developed by the Licensor.
+   b. "User" refers to any individual or entity using the Software.
+
+2. PERMISSIONS OF USE
+   a. The Licensor grants the Licensee a non-exclusive, non-transferable license to use, modify (with some restrictions), and distribute the Software, subject to the conditions set forth in this Agreement.
+
+3. LIMITATIONS
+   a. The Licensee is not entitled to change the license of the Software.
+   b. The Licensee may not use the Software for private source code projects.
+   c. The Licensee may not sublicense the Software or grant sublicenses.
+   d. The Licensee may not impede or hinder the delivery of advertising to users after modifying the Software. Any such action may result in severe legal consequences.
+
+4. LIABILITY
+   a. The Software is provided "as is," and the Licensor assumes no liability for any direct, indirect, incidental, special, or consequential damages arising from the use of the Software.
+
+5. SECURITY
+   a. The Licensee agrees to maintain the encryption system provided by the Software intact and free from interference. Modifying or interfering with the encryption system in any way is not permitted.
+
+6. ADDITIONAL TERMS
+   a. The Licensee agrees to never try, 
+
+7. COPYRIGHT
+   a. The Software is protected by copyright and other intellectual property rights. The Licensee is not entitled to remove or alter any copyright notice present in the Software.
+
+8. APPLICABLE LAW
+   a. This Agreement shall be governed and interpreted in accordance with the laws of [country or jurisdiction].
+
+By accepting this Agreement, the Licensee agrees to the terms and conditions set forth herein.
+
+Capybara Social
+capybaraofficialsupport@proton.me
+
+Date: 11/2023

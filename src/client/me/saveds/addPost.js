@@ -4,7 +4,7 @@ let plantilla = document.getElementById("huff");
 let columns = mainC.children;
 let colCounter = 0;
 
-const videoLoad = require("../../generals/videoPlayer")
+const videoLoad = require("../../_generals/videoPlayer")
 
 function loadHuff(huff){
     if(colCounter > 2) colCounter = 0;

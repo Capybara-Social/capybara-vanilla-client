@@ -1,0 +1,11 @@
+<svg version="1.2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" width="400" height="400"  >
+	<style>
+	</style>
+	<clipPath id="clippathcapybara">
+		<path id="Layer 2" class="s0" d="m0 46l39.1 1.7 20.7-42.5 35.6-5.2 33.9 25.3 128.3 35.8 142.4 101.2-41.4 116.9-177.1 11.9-181.5 108.9z"/>
+	</clipPath>
+
+	<g  clip-path="url(#clippathcapybara)">
+		<rect width="100%" fill="#a52a02" height="100%"/>
+	</g>
+</svg>
