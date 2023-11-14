@@ -38,11 +38,16 @@ document.getElementById("loginButton").onclick = () => {
 
     let xhttp = new XMLHttpRequest();
     xhttp.onload = async () => {
+        if(xhttp.status == 400) return;
             let decoded = await decryptWithPassword(JSON.parse(xhttp.response)["data"]["secret"], password);
             const keys = new KeyPair(decoded);
             const masterKey = await keys.computeKey(serverKey);
             const rawKey = await decryptWithPassword(JSON.parse(xhttp.response)["data"]["key"], masterKey);
-    
+
+           console.log(JSON.parse(xhttp.response))
+            console.log(keys)
+            console.log(masterKey)
+            console.log(rawKey)
             let xhttp2 = new XMLHttpRequest();
             let data2 = {
                 encoded: false,
@@ -56,7 +61,6 @@ document.getElementById("loginButton").onclick = () => {
             }
 
             xhttp2.onload = () => {
-                console.log(xhttp2.response);
                 const response2 = JSON.parse(xhttp2.response);
                 if(response2.error != false) return console.log("hubo un error :P");
 
@@ -64,6 +68,7 @@ document.getElementById("loginButton").onclick = () => {
                 localStorage.setItem("key", JSON.stringify({key: rawKey, exp: JSON.parse(xhttp.response)["data"]["exp"]}));
                 window.location.href = coming+ "/main/";
             }
+
             xhttp2.open("POST", `/api/login`);
             xhttp2.setRequestHeader("Content-Type", "application/json");
             xhttp2.send(JSON.stringify(data2));
