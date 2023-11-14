@@ -2,7 +2,7 @@ const path = require("path");
 const CopyPlugin = require("copy-webpack-plugin");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const ejs = require("ejs");
-const icons = require("./src/client/_generals/icons.json");
+const icons = require("./client/_generals/icons.json");
 const fs = require("fs");
 
 try{fs.rmSync(path.join(".", "build"), { recursive: true, force: true })}
@@ -43,7 +43,7 @@ ejsnames.forEach(name => {
   plugins.push(new HtmlWebpackPlugin({
       filename: `${name}/index.html`,
       chunks : [path.join(name, "bundle")],
-      templateContent: ejs.renderFile(path.join("src", "client", name, "index.ejs"), {icons}),
+      templateContent: ejs.renderFile(path.join("client", name, "index.ejs"), {icons}),
       minify: true,
       cache: true
   }))
@@ -51,7 +51,7 @@ ejsnames.forEach(name => {
 
 plugins.push(new CopyPlugin({
   patterns: [
-    { from: path.resolve("src","client","_src"), to: path.resolve("build","client","_src") },
+    { from: path.resolve("client","_src"), to: path.resolve("build","client","_src") },
   ],
 }),)
 
