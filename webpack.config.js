@@ -11,7 +11,7 @@ catch(e){console.log(e)}
 
 
 
-const src = path.join(__dirname, "src", "client");
+const src = path.join(__dirname, "client");
 
 let dirs = fs.readdirSync(src).filter(x => !x.startsWith("_"));
 
