@@ -1,3 +1,5 @@
+@import "../_generals/colors.scss";
+
 :root{
     background-color: var(--background);
 }
@@ -323,3 +325,5 @@ svg[class=waiting]{
         display: none;
     }
 }
+
+@import "../_generals/fonts.scss";

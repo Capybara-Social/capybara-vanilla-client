@@ -1,6 +1,6 @@
 ![Capybara-VClient](https://i.imgur.com/i7lX7qp.png)
 
-# Capybara Vanilla Client &middot; ![GitHub](https://img.shields.io/github/license/Capybara-Social/capybara-vanilla-client?labelColor=%23ffc836)
+# Capybara Vanilla Client 
 The official Capybara client made in vanilla javascript
 
 
@@ -45,3 +45,12 @@ Finally, it searches for the `index.js` in the same folder and once it's compile
 - [copy-webpack-plugin](https://www.npmjs.com/package/copy-webpack-plugin)
 - [style-loader](https://www.npmjs.com/package/style-loader)
 - [css-loader](https://www.npmjs.com/package/css-loader)
+- [ESLint](https://www.npmjs.com/package/eslint)
+
+
+# Last fixes
+
+Since the project is getting bigger and bigger we are tending to standarize it.
+
+- We have added ESLint to mantain a structure
+- We will correct all JS files to stay 

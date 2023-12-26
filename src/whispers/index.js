@@ -1,19 +1,20 @@
 //JS
-require('../_generals/theme.js')
-require('../_generals/showcase.js')
-require('../_generals/userLoad.js')
-require('../_generals/menu.js')
+import '../_generals/theme.js';
+import '../_generals/showcase.js';
+import '../_generals/userLoad.js';
+import '../_generals/menu.js';
+import '../_generals/classes.js';
 
 //CSS
-require('../_generals/colors.scss')
-require('../_generals/huff.scss')
-require('./whispers.scss')
-require('../_generals/options.scss')
-require('../_generals/scrollbar.scss')
-require('../_generals/showcase.scss')
-require('../_generals/videoPlayer.scss')
-require('../_generals/menu.scss')
-require('../_generals/fonts.scss')
+import '../_generals/colors.scss';
+import '../_generals/huff.scss';
+import './whispers.scss';
+import '../_generals/options.scss';
+import '../_generals/scrollbar.scss';
+import '../_generals/showcase.scss';
+import '../_generals/videoPlayer.scss';
+import '../_generals/menu.scss';
+import '../_generals/fonts.scss';
 
 
 //options
@@ -25,5 +26,5 @@ document.getElementById("dm").style.color = "var(--whispers)";
 document.getElementById("dm").onclick = () => {
 	document.getElementById("conContent").scrollTop = 0;
 	document.getElementById("curCont").scrollTop = 0;
-}
+};
 

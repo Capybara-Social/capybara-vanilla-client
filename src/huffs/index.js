@@ -1,24 +1,24 @@
-
-require('../_generals/theme.js')
-require('../_generals/showcase.js')
-let {user} =require('../_generals/userLoad.js')
-require('../_generals/menu.js')
-let {loadHuff} = require('./loadPost.js')
-require('./addComment.js')
+import {loadHuff} from './loadPost.js';
+import {user} from '../_generals/userLoad.js';
+import {User, Post} from '../_generals/classes.js';
+import '../_generals/theme.js';
+import '../_generals/showcase.js';
+import '../_generals/menu.js';
+import './addComment.js';
 
 
 
 
 //CSS
-require('../_generals/colors.scss')
-require('../_generals/huff.scss')
-require('./huffs.scss')
-require('../_generals/options.scss')
-require('../_generals/scrollbar.scss')
-require('../_generals/showcase.scss')
-require('../_generals/videoPlayer.scss')
-require('../_generals/menu.scss')
-require('../_generals/fonts.scss')
+import '../_generals/colors.scss';
+import '../_generals/huff.scss';
+import './huffs.scss';
+import '../_generals/options.scss';
+import '../_generals/scrollbar.scss';
+import '../_generals/showcase.scss';
+import '../_generals/videoPlayer.scss';
+import '../_generals/menu.scss';
+import '../_generals/fonts.scss';
 
 
 //CODE
@@ -26,12 +26,12 @@ document.head.getElementsByTagName("title")[0].innerText = user.username + "'s "
 
 //get
 
-const coming = "/client";
+const coming = "";
 
 let url = new URL(window.location.toString());
-let params = new URLSearchParams(url.search)
-if(params.get("from") == "explore") document.getElementById("goBack").href = coming + "/explore"
-else document.getElementById("goBack").href = coming + "/main"
+let params = new URLSearchParams(url.search);
+if(params.get("from") == "explore") document.getElementById("goBack").href = coming + "/explore";
+else document.getElementById("goBack").href = coming + "/main";
 
 
 //Indev
@@ -40,8 +40,8 @@ let myUser = new User('Lifestyle Latino','#ee11ee', 'https://pbs.twimg.com/profi
 let myPost2 = new Post(myUser, 
 	'Llegó la hora de desbloquear tu energía espiritual y descubrir si cuentas con una fuerte voluntad como el aura roja, energía sin límites como el aura naranja, o un color completamente diferente. ¡Contesta estas preguntas para revelar tu color!', 
 	[
-	{uri: 'https://pbs.twimg.com/media/F2pAmkDXMAExDGX?format=jpg&name=small', type:"img"},
+		{uri: 'https://pbs.twimg.com/media/F2pAmkDXMAExDGX?format=jpg&name=small', type:"img"},
 	],
-	 Date.now(), true)
+	Date.now(), true);
 
-loadHuff(myPost2)
+loadHuff(myPost2);
